@@ -74,12 +74,12 @@ const Banner = () => {
 
   let box = document.querySelector(".banner_Item_main_container");
   const HandlebtnPrev = () => {
-    let width = box.clientWidth;
-    box.scrollLeft = box.scrollLeft - width;
+    // let width = box.clientWidth;
+    // box.scrollLeft = box.scrollLeft - width;
   };
   const HandlebtnNext = () => {
-    let width = box.clientWidth;
-    box.scrollLeft = box.scrollLeft + width;
+    // let width = box.clientWidth;
+    // box.scrollLeft = box.scrollLeft + width;
   };
 
   return (
