@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import "./Banner.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
+import { Center } from "@chakra-ui/react";
 
 const Banner = () => {
   let BannerData = [
@@ -72,6 +75,26 @@ const Banner = () => {
     },
   ];
 
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 7,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   let box = document.querySelector(".banner_Item_main_container");
   const HandlebtnPrev = () => {
     // let width = box.clientWidth;
@@ -97,7 +120,7 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="carousal">
+        {/* <div className="carousal">
           <div className="banner_Item_main_container">
             {BannerData.map((ele, index) => {
               return (
@@ -107,7 +130,20 @@ const Banner = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
+        <Center>
+          <div className="banner_Item_main_container">
+            <Carousel responsive={responsive}>
+              {BannerData.map((ele, index) => {
+                return (
+                  <div className="image_div" key={index}>
+                    <img src={ele.imageUrl} alt={ele.name} />
+                  </div>
+                );
+              })}
+            </Carousel>
+          </div>
+        </Center>
       </div>
     </>
   );
