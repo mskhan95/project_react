@@ -1,0 +1,46 @@
+.FirstContainer {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  padding: 20px 0;
+  align-self: center;
+  align-items: center;
+}
+
+.FirstContainer > h1 {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+.LogoContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.playStoreLogo {
+  height: 64px;
+  max-width: 208px;
+}
+
+.AppStoreLogo {
+  height: 64px;
+  max-width: 208px;
+}
+
+.SecondContainer {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  background-color: black;
+  color: white;
+  justify-content: space-around;
+  padding: 20px 0 40px 0;
+}
+
+.heading {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
